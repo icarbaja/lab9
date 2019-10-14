@@ -1,1 +1,14 @@
+<% content_for :title do %>Article<% end %>
 <h1>New Article</h1>
+
+  <%= form_for :article, url: articles_path do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title, autofocus: true %>
+    <br/>
+    <br/>
+    <%= form.label :text %>
+    <%= form.text_area :text, size: '40x5' %>
+    <br/>
+    <br/>
+    <%= form.submit %>
+  <% end %>
